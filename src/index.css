@@ -86,7 +86,7 @@ body::after {
   }
 }
 
-/* Additional animated circuit elements */
+/* Optimized animated circuit elements */
 .circuit-dots {
   position: fixed;
   top: 0;
@@ -99,24 +99,25 @@ body::after {
 
 .circuit-dot {
   position: absolute;
-  width: 3px;
-  height: 3px;
+  width: 2px;
+  height: 2px;
   background: var(--neon-cyan);
   border-radius: 50%;
-  animation: dotPulse 4s ease-in-out infinite;
-  box-shadow: 0 0 8px var(--neon-cyan);
+  animation: dotPulse 8s ease-in-out infinite;
+  box-shadow: 0 0 4px var(--neon-cyan);
+  will-change: transform, opacity;
 }
 
 .circuit-dot:nth-child(1) { top: 20%; left: 15%; animation-delay: 0s; }
-.circuit-dot:nth-child(2) { top: 35%; left: 80%; animation-delay: 1s; }
-.circuit-dot:nth-child(3) { top: 60%; left: 25%; animation-delay: 2s; }
-.circuit-dot:nth-child(4) { top: 75%; left: 70%; animation-delay: 3s; }
-.circuit-dot:nth-child(5) { top: 45%; left: 45%; animation-delay: 0.5s; }
-.circuit-dot:nth-child(6) { top: 85%; left: 90%; animation-delay: 1.5s; }
-.circuit-dot:nth-child(7) { top: 10%; left: 60%; animation-delay: 2.5s; }
-.circuit-dot:nth-child(8) { top: 90%; left: 10%; animation-delay: 3.5s; }
+.circuit-dot:nth-child(2) { top: 35%; left: 80%; animation-delay: 2s; }
+.circuit-dot:nth-child(3) { top: 60%; left: 25%; animation-delay: 4s; }
+.circuit-dot:nth-child(4) { top: 75%; left: 70%; animation-delay: 6s; }
+.circuit-dot:nth-child(5) { top: 45%; left: 45%; animation-delay: 1s; }
+.circuit-dot:nth-child(6) { top: 85%; left: 90%; animation-delay: 3s; }
+.circuit-dot:nth-child(7) { top: 10%; left: 60%; animation-delay: 5s; }
+.circuit-dot:nth-child(8) { top: 90%; left: 10%; animation-delay: 7s; }
 
-/* Circuit lines */
+/* Simplified circuit lines */
 .circuit-lines {
   position: fixed;
   top: 0;
@@ -131,14 +132,13 @@ body::after {
   position: absolute;
   background: linear-gradient(90deg, transparent, var(--neon-cyan), transparent);
   height: 1px;
-  animation: lineFlow 6s linear infinite;
+  animation: lineFlow 12s linear infinite;
+  will-change: transform, opacity;
 }
 
-.circuit-line:nth-child(1) { top: 30%; left: 0; width: 200px; animation-delay: 0s; }
-.circuit-line:nth-child(2) { top: 50%; right: 0; width: 150px; animation-delay: 2s; }
-.circuit-line:nth-child(3) { top: 70%; left: 20%; width: 180px; animation-delay: 4s; }
-.circuit-line:nth-child(4) { top: 20%; right: 30%; width: 120px; animation-delay: 1s; }
-.circuit-line:nth-child(5) { top: 80%; left: 60%; width: 160px; animation-delay: 3s; }
+.circuit-line:nth-child(1) { top: 30%; left: 0; width: 150px; animation-delay: 0s; }
+.circuit-line:nth-child(2) { top: 50%; right: 0; width: 100px; animation-delay: 4s; }
+.circuit-line:nth-child(3) { top: 70%; left: 20%; width: 120px; animation-delay: 8s; }
 
 @keyframes lineFlow {
   0% {
@@ -146,7 +146,7 @@ body::after {
     transform: translateX(-100%);
   }
   50% {
-    opacity: 1;
+    opacity: 0.5;
   }
   100% {
     opacity: 0;
@@ -156,14 +156,14 @@ body::after {
 
 @keyframes dotPulse {
   0%, 100% {
-    opacity: 0.3;
+    opacity: 0.2;
     transform: scale(1);
-    box-shadow: 0 0 5px var(--neon-cyan);
+    box-shadow: 0 0 3px var(--neon-cyan);
   }
   50% {
-    opacity: 1;
-    transform: scale(1.5);
-    box-shadow: 0 0 15px var(--neon-cyan), 0 0 25px var(--neon-blue);
+    opacity: 0.6;
+    transform: scale(1.3);
+    box-shadow: 0 0 8px var(--neon-cyan);
   }
 }
 

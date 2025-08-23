@@ -512,70 +512,54 @@ footer p {
 /* Background Tech Symbols */
 .bg-react-symbol {
   position: fixed;
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   pointer-events: none;
   z-index: -1;
-  opacity: 0.05;
-  animation: bgReactRotate3D 15s linear infinite;
+  opacity: 0.03;
+  animation: bgReactRotate3D 20s linear infinite;
+  will-change: transform;
 }
 
 .bg-ethereum-symbol {
   position: fixed;
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   pointer-events: none;
   z-index: -1;
-  opacity: 0.08;
-  animation: bgEthereumFloat3D 12s ease-in-out infinite;
-  filter: drop-shadow(0 0 10px var(--neon-cyan));
+  opacity: 0.05;
+  animation: bgEthereumFloat3D 18s ease-in-out infinite;
+  will-change: transform;
 }
 
 /* Background React Symbols */
-.bg-react-symbol.react-1 { top: 10%; left: 5%; animation-delay: 0s; }
-.bg-react-symbol.react-2 { top: 30%; left: 85%; animation-delay: 3s; }
-.bg-react-symbol.react-3 { top: 70%; left: 15%; animation-delay: 6s; }
-.bg-react-symbol.react-4 { top: 60%; left: 85%; animation-delay: 9s; }
-.bg-react-symbol.react-5 { top: 45%; left: 25%; animation-delay: 12s; }
+.bg-react-symbol.react-1 { top: 15%; left: 10%; animation-delay: 0s; }
+.bg-react-symbol.react-2 { top: 45%; left: 80%; animation-delay: 7s; }
+.bg-react-symbol.react-3 { top: 75%; left: 20%; animation-delay: 14s; }
 
 /* Background Ethereum Symbols */
-.bg-ethereum-symbol.eth-1 { top: 15%; left: 15%; animation-delay: 0s; }
-.bg-ethereum-symbol.eth-2 { top: 35%; left: 75%; animation-delay: 2s; }
-.bg-ethereum-symbol.eth-3 { top: 65%; left: 10%; animation-delay: 4s; }
-.bg-ethereum-symbol.eth-4 { top: 75%; left: 70%; animation-delay: 6s; }
-.bg-ethereum-symbol.eth-5 { top: 25%; left: 60%; animation-delay: 8s; }
-.bg-ethereum-symbol.eth-6 { top: 55%; left: 80%; animation-delay: 10s; }
+.bg-ethereum-symbol.eth-1 { top: 25%; left: 25%; animation-delay: 0s; }
+.bg-ethereum-symbol.eth-2 { top: 55%; left: 70%; animation-delay: 6s; }
+.bg-ethereum-symbol.eth-3 { top: 85%; left: 15%; animation-delay: 12s; }
 
 @keyframes bgReactRotate3D {
   0% {
-    transform: rotate(0deg) rotateX(0deg) rotateY(0deg) scale(1);
-  }
-  25% {
-    transform: rotate(90deg) rotateX(15deg) rotateY(15deg) scale(1.1);
+    transform: rotate(0deg) scale(1);
   }
   50% {
-    transform: rotate(180deg) rotateX(30deg) rotateY(0deg) scale(0.9);
-  }
-  75% {
-    transform: rotate(270deg) rotateX(15deg) rotateY(-15deg) scale(1.05);
+    transform: rotate(180deg) scale(1.05);
   }
   100% {
-    transform: rotate(360deg) rotateX(0deg) rotateY(0deg) scale(1);
+    transform: rotate(360deg) scale(1);
   }
 }
 
 @keyframes bgEthereumFloat3D {
   0%, 100% {
-    transform: translateY(0px) translateZ(0px) rotateX(0deg) scale(1);
-  }
-  25% {
-    transform: translateY(-20px) translateZ(15px) rotateX(10deg) scale(1.1);
+    transform: translateY(0px) scale(1);
   }
   50% {
-    transform: translateY(-30px) translateZ(30px) rotateX(20deg) scale(0.9);
-  }
-  75% {
-    transform: translateY(-10px) translateZ(15px) rotateX(10deg) scale(1.05);
+    transform: translateY(-15px) scale(1.05);
   }
 }
 
