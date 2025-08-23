@@ -104,6 +104,11 @@ function App() {
       icon: <FaShieldAlt />,
       title: "Security & Testing",
       description: "Smart contract auditing, penetration testing, and comprehensive security analysis for Web3 applications."
+    },
+    {
+      icon: <FaGithub />,
+      title: "Version Control & Collaboration",
+      description: "Git, GitHub, GitLab, collaborative development workflows, code review, and open-source contribution practices."
     }
   ];
 
