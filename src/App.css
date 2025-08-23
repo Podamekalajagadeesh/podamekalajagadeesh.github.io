@@ -640,3 +640,103 @@ footer p {
     font-size: 1.5rem;
   }
 }
+
+/* Desktop view on mobile browsers */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .nav-container {
+    padding: 0 30px;
+  }
+
+  .logo {
+    font-size: 26px;
+  }
+
+  .nav-links {
+    gap: 30px;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+
+  .container {
+    padding: 100px 30px 60px;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .cta-buttons {
+    gap: 20px;
+  }
+
+  .btn {
+    width: 180px;
+  }
+}
+
+/* Large desktop screens */
+@media (min-width: 1025px) {
+  .nav-container {
+    padding: 0 40px;
+  }
+
+  .logo {
+    font-size: 28px;
+  }
+
+  .nav-links {
+    gap: 40px;
+  }
+
+  .nav-links a {
+    font-size: 18px;
+    padding: 10px 15px;
+  }
+
+  .container {
+    padding: 120px 40px 80px;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .section-title {
+    font-size: 3rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  .cta-buttons {
+    gap: 25px;
+  }
+
+  .btn {
+    width: 200px;
+  }
+}
