@@ -451,17 +451,22 @@
   transition: all 0.3s ease;
   cursor: pointer;
   border-radius: 15px;
+  background: rgba(0, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 255, 0.1);
 }
 
 .contact-item:hover {
   transform: translateY(-5px) scale(1.05);
-  background: rgba(0, 255, 255, 0.1);
-  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+  background: rgba(0, 255, 255, 0.15);
+  border-color: var(--neon-cyan);
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
 }
 
 .contact-icon {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: var(--neon-cyan);
+  min-width: 2rem;
+  text-align: center;
 }
 
 .contact-item h4 {
