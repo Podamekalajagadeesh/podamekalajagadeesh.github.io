@@ -512,13 +512,12 @@ footer p {
 /* Background Tech Symbols */
 .bg-react-symbol {
   position: fixed;
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   pointer-events: none;
   z-index: -1;
-  opacity: 0.03;
-  animation: bgReactRotate3D 20s linear infinite;
-  will-change: transform;
+  opacity: 0.05;
+  animation: bgReactRotate3D 15s linear infinite;
 }
 
 .bg-ethereum-symbol {

@@ -18,6 +18,8 @@ const CircuitBackground = () => {
         <div className="circuit-line"></div>
         <div className="circuit-line"></div>
         <div className="circuit-line"></div>
+        <div className="circuit-line"></div>
+        <div className="circuit-line"></div>
       </div>
       
       {/* Background React Symbols */}
