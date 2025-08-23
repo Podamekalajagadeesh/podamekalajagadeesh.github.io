@@ -15,6 +15,7 @@ import {
 } from 'react-icons/fa';
 import CircuitBackground from './CircuitBackground';
 import './App.css';
+import './zindex-fix.css';
 
 function App() {
   const observerRef = useRef();
