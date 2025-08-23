@@ -11,9 +11,9 @@ import {
   FaGithub,
   FaLinkedin,
   FaTwitter,
-  FaDiscord,
-  FaPalette
+  FaDiscord
 } from 'react-icons/fa';
+import { SiFigma } from 'react-icons/si';
 import CircuitBackground from './CircuitBackground';
 import './App.css';
 import './zindex-fix.css';
@@ -112,7 +112,7 @@ function App() {
       description: "Git, GitHub, GitLab, collaborative development workflows, code review, and open-source contribution practices."
     },
     {
-      icon: <FaPalette />,
+      icon: <SiFigma />,
       title: "UI/UX Design",
       description: "User interface design, user experience optimization, responsive design, wireframing, prototyping, and modern design systems."
     }
