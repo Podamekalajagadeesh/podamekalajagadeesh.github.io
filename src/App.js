@@ -11,7 +11,8 @@ import {
   FaGithub,
   FaLinkedin,
   FaTwitter,
-  FaDiscord
+  FaDiscord,
+  FaPalette
 } from 'react-icons/fa';
 import CircuitBackground from './CircuitBackground';
 import './App.css';
@@ -109,6 +110,11 @@ function App() {
       icon: <FaGithub />,
       title: "Version Control & Collaboration",
       description: "Git, GitHub, GitLab, collaborative development workflows, code review, and open-source contribution practices."
+    },
+    {
+      icon: <FaPalette />,
+      title: "UI/UX Design",
+      description: "User interface design, user experience optimization, responsive design, wireframing, prototyping, and modern design systems."
     }
   ];
 
