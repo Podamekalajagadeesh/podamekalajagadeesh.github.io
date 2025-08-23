@@ -522,28 +522,28 @@ footer p {
 
 .bg-ethereum-symbol {
   position: fixed;
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   pointer-events: none;
   z-index: -1;
-  opacity: 0.08;
+  opacity: 0.15;
   animation: bgEthereumFloat3D 12s ease-in-out infinite;
 }
 
 /* Background React Symbols */
-.bg-react-symbol:nth-child(1) { top: 10%; left: 5%; animation-delay: 0s; }
-.bg-react-symbol:nth-child(2) { top: 30%; right: 8%; animation-delay: 3s; }
-.bg-react-symbol:nth-child(3) { bottom: 15%; left: 15%; animation-delay: 6s; }
-.bg-react-symbol:nth-child(4) { bottom: 40%; right: 5%; animation-delay: 9s; }
-.bg-react-symbol:nth-child(5) { top: 60%; left: 25%; animation-delay: 12s; }
+.bg-react-symbol:nth-of-type(1) { top: 10%; left: 5%; animation-delay: 0s; }
+.bg-react-symbol:nth-of-type(2) { top: 30%; right: 8%; animation-delay: 3s; }
+.bg-react-symbol:nth-of-type(3) { bottom: 15%; left: 15%; animation-delay: 6s; }
+.bg-react-symbol:nth-of-type(4) { bottom: 40%; right: 5%; animation-delay: 9s; }
+.bg-react-symbol:nth-of-type(5) { top: 60%; left: 25%; animation-delay: 12s; }
 
 /* Background Ethereum Symbols */
-.bg-ethereum-symbol:nth-child(1) { top: 20%; left: 20%; animation-delay: 0s; }
-.bg-ethereum-symbol:nth-child(2) { top: 50%; right: 20%; animation-delay: 2s; }
-.bg-ethereum-symbol:nth-child(3) { bottom: 25%; left: 10%; animation-delay: 4s; }
-.bg-ethereum-symbol:nth-child(4) { bottom: 60%; right: 15%; animation-delay: 6s; }
-.bg-ethereum-symbol:nth-child(5) { top: 80%; left: 40%; animation-delay: 8s; }
-.bg-ethereum-symbol:nth-child(6) { top: 40%; right: 40%; animation-delay: 10s; }
+.bg-ethereum-symbol:nth-of-type(1) { top: 20%; left: 20%; animation-delay: 0s; }
+.bg-ethereum-symbol:nth-of-type(2) { top: 50%; right: 20%; animation-delay: 2s; }
+.bg-ethereum-symbol:nth-of-type(3) { bottom: 25%; left: 10%; animation-delay: 4s; }
+.bg-ethereum-symbol:nth-of-type(4) { bottom: 60%; right: 15%; animation-delay: 6s; }
+.bg-ethereum-symbol:nth-of-type(5) { top: 80%; left: 40%; animation-delay: 8s; }
+.bg-ethereum-symbol:nth-of-type(6) { top: 40%; right: 40%; animation-delay: 10s; }
 
 @keyframes bgReactRotate3D {
   0% {
