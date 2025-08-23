@@ -521,7 +521,7 @@ footer p {
   height: 80px;
   pointer-events: none;
   z-index: -1;
-  opacity: 0.05;
+  opacity: 0.02;
   animation: bgReactRotate3D 15s linear infinite;
 }
 
@@ -531,7 +531,7 @@ footer p {
   height: 60px;
   pointer-events: none;
   z-index: -1;
-  opacity: 0.05;
+  opacity: 0.025;
   animation: bgEthereumFloat3D 18s ease-in-out infinite;
   will-change: transform;
 }
