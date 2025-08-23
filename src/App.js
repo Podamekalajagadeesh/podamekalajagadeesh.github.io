@@ -353,10 +353,7 @@ function App() {
                 whileTap={{ scale: 0.95 }}
               >
                 <FaEnvelope className="contact-icon" />
-                <div>
-                  <h4>Email</h4>
-                  <p>podamekalajagadeesh@gmail.com</p>
-                </div>
+                <p>podamekalajagadeesh@gmail.com</p>
               </motion.div>
               <motion.div 
                 className="contact-item"
@@ -365,10 +362,7 @@ function App() {
                 whileTap={{ scale: 0.95 }}
               >
                 <FaGithub className="contact-icon" />
-                <div>
-                  <h4>GitHub</h4>
-                  <p>github.com/Podamekalajagadeesh</p>
-                </div>
+                <p>github.com/Podamekalajagadeesh</p>
               </motion.div>
               <motion.div 
                 className="contact-item"
@@ -377,10 +371,7 @@ function App() {
                 whileTap={{ scale: 0.95 }}
               >
                 <FaLinkedin className="contact-icon" />
-                <div>
-                  <h4>LinkedIn</h4>
-                  <p>linkedin.com/in/podamekalajagadeesh</p>
-                </div>
+                <p>linkedin.com/in/podamekalajagadeesh</p>
               </motion.div>
             </div>
           </motion.div>
