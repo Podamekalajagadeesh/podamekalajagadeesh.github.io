@@ -44,6 +44,11 @@ body::after {
   z-index: 1 !important;
 }
 
+.hero {
+  position: relative;
+  z-index: 1 !important;
+}
+
 .skill-card {
   position: relative;
   z-index: 2 !important;
@@ -60,11 +65,6 @@ body::after {
 }
 
 /* Fix for any overlapping issues */
-.hero {
-  position: relative;
-  z-index: 1 !important;
-}
-
 .tech-symbols {
   position: relative;
   z-index: 3 !important;
@@ -73,4 +73,46 @@ body::after {
 .symbol-container {
   position: relative;
   z-index: 3 !important;
+}
+
+/* Fix button positioning and prevent overlap */
+.cta-buttons {
+  position: relative;
+  z-index: 5 !important;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.btn {
+  position: relative;
+  z-index: 5 !important;
+  margin: 5px;
+}
+
+/* Ensure proper stacking for all interactive elements */
+.profile-img {
+  position: relative;
+  z-index: 4 !important;
+}
+
+.hero h1, .hero h2, .hero p {
+  position: relative;
+  z-index: 4 !important;
+}
+
+/* Fix for any remaining overlap issues */
+* {
+  box-sizing: border-box;
+}
+
+/* Ensure proper isolation for sections */
+.section {
+  isolation: isolate;
+}
+
+.hero {
+  isolation: isolate;
 }
