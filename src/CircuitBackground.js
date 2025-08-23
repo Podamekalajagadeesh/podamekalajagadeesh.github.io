@@ -80,11 +80,7 @@ const CircuitBackground = () => {
         <polygon points="50,45 30,50 50,80 70,50" fill="var(--neon-blue)"/>
       </svg>
       
-      {/* 3D Floating Elements */}
-      <div className="floating-3d"></div>
-      <div className="floating-3d"></div>
-      <div className="floating-3d"></div>
-      <div className="floating-3d"></div>
+
     </>
   );
 };
