@@ -110,11 +110,13 @@ function App() {
       icon: <FaGithub />,
       title: "Version Control & Collaboration",
       description: "Git, GitHub, GitLab, collaborative development workflows, code review, and open-source contribution practices."
+      // TODO: Customize this skill description as needed
     },
     {
       icon: <SiFigma />,
       title: "UI/UX Design",
       description: "User interface design, user experience optimization, responsive design, wireframing, prototyping, and modern design systems."
+      // TODO: Customize this skill description as needed
     }
   ];
 
