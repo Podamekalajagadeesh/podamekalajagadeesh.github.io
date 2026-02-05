@@ -128,14 +128,14 @@ function App() {
       link: "#"
     },
     {
-      title: "Freelance DApp",
-      description: "A decentralized freelance platform enabling secure escrow and automated payments using smart contracts on Ethereum.",
+      title: "DeFi Project",
+      description: "An innovative DeFi application that will revolutionize yield farming and liquidity provision with advanced smart contract automation.",
       tech: ["Solidity", "React", "Hardhat", "Web3.js"],
       link: "https://github.com/Podamekalajagadeesh/Freelance-dapp"
     },
     {
-      title: "Nftpass",
-      description: "An NFT-based access pass system with advanced metadata management and utility features on Ethereum.",
+      title: "NFT Collection",
+      description: "A unique NFT collection with generative art and utility features, built on Ethereum with advanced metadata management.",
       tech: ["ERC-721", "IPFS", "Solidity", "Generative Art"],
       link: "https://github.com/Podamekalajagadeesh/Nftpass"
     }
