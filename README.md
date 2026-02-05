@@ -100,7 +100,6 @@ The portfolio is fully responsive and optimized for:
 Update the social media links in the footer section:
 - GitHub: https://github.com/Podamekalajagadeesh
 - LinkedIn: https://www.linkedin.com/in/podamekalajagadeesh
-- Add your Twitter and Discord links
 
 ## 📄 License
 
