@@ -1,0 +1,118 @@
+/* Fix for z-index conflicts causing elements to mix while scrolling */
+
+/* Ensure proper z-index hierarchy */
+body::before {
+  z-index: -3 !important;
+}
+
+body::after {
+  z-index: -2 !important;
+}
+
+.circuit-dots {
+  z-index: -1 !important;
+}
+
+.circuit-lines {
+  z-index: -1 !important;
+}
+
+.bg-react-symbol {
+  z-index: -1 !important;
+}
+
+.bg-ethereum-symbol {
+  z-index: -1 !important;
+}
+
+.floating-3d {
+  z-index: -1 !important;
+}
+
+/* Ensure content stays above background */
+.nav {
+  z-index: 1000 !important;
+}
+
+.container {
+  position: relative;
+  z-index: 1 !important;
+}
+
+.section {
+  position: relative;
+  z-index: 1 !important;
+}
+
+.hero {
+  position: relative;
+  z-index: 1 !important;
+}
+
+.skill-card {
+  position: relative;
+  z-index: 2 !important;
+}
+
+.project-card {
+  position: relative;
+  z-index: 2 !important;
+}
+
+.contact-item {
+  position: relative;
+  z-index: 2 !important;
+}
+
+/* Fix for any overlapping issues */
+.tech-symbols {
+  position: relative;
+  z-index: 3 !important;
+}
+
+.symbol-container {
+  position: relative;
+  z-index: 3 !important;
+}
+
+/* Fix button positioning and prevent overlap */
+.cta-buttons {
+  position: relative;
+  z-index: 5 !important;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.btn {
+  position: relative;
+  z-index: 5 !important;
+  margin: 5px;
+}
+
+/* Ensure proper stacking for all interactive elements */
+.profile-img {
+  position: relative;
+  z-index: 4 !important;
+}
+
+.hero h1, .hero h2, .hero p {
+  position: relative;
+  z-index: 4 !important;
+}
+
+/* Fix for any remaining overlap issues */
+* {
+  box-sizing: border-box;
+}
+
+/* Ensure proper isolation for sections */
+.section {
+  isolation: isolate;
+}
+
+.hero {
+  isolation: isolate;
+}
