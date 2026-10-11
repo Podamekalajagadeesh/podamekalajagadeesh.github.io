@@ -1,20 +1,22 @@
+
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  FaCode, 
-  FaEthereum, 
-  FaChartLine, 
-  FaReact, 
-  FaDatabase, 
+
+import {
+  FaCode,
+  FaEthereum,
+  FaChartLine,
+  FaReact,
+  FaDatabase,
   FaShieldAlt,
   FaEnvelope,
   FaGithub,
-  FaLinkedin,
-  FaTwitter,
-  FaDiscord
+  FaLinkedin
 } from 'react-icons/fa';
+
 import { SiFigma } from 'react-icons/si';
 import CircuitBackground from './CircuitBackground';
+
 import './App.css';
 import './zindex-fix.css';
 
@@ -22,7 +24,6 @@ function App() {
   const observerRef = useRef();
 
   useEffect(() => {
-    // Intersection Observer for scroll animations
     observerRef.current = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -50,106 +51,159 @@ function App() {
   const handleHireClick = () => {
     const email = 'podamekalajagadeesh@gmail.com';
     const subject = 'Web3 Development Opportunity';
-    const body = 'Hi Jagadeesh,\n\nI would like to discuss a potential Web3 development project with you.\n\nBest regards,';
-    
-    window.open(`mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`);
+    const body =
+      'Hi Jagadeesh,\n\nI would like to discuss a potential Web3 development project with you.\n\nBest regards,';
+
+    window.open(
+      `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+    );
   };
 
   const handleEmailClick = () => {
-    const email = 'podamekalajagadeesh@gmail.com';
-    window.open(`mailto:${email}`);
+    window.location.href = 'mailto:podamekalajagadeesh@gmail.com';
   };
 
   const handleGitHubClick = () => {
-    window.open('https://github.com/Podamekalajagadeesh', '_blank');
+    window.open(
+      'https://github.com/Podamekalajagadeesh',
+      '_blank',
+      'noopener,noreferrer'
+    );
   };
 
   const handleLinkedInClick = () => {
-    window.open('https://www.linkedin.com/in/podamekalajagadeesh', '_blank');
+    window.open(
+      'https://www.linkedin.com/in/podamekalajagadeesh/',
+      '_blank',
+      'noopener,noreferrer'
+    );
   };
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
+
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
     }
   };
 
+  // Updated skills; original card design remains unchanged.
   const skills = [
     {
       icon: <FaCode />,
-      title: "Smart Contracts",
-      description: "Solidity, Hardhat, Foundry, OpenZeppelin, and advanced smart contract development with security best practices."
+      title: 'Smart Contract Development',
+      description:
+        'Solidity, Hardhat, OpenZeppelin, contract deployment, testing, and Ethereum smart contract development.'
     },
     {
       icon: <FaEthereum />,
-      title: "Blockchain Development",
-      description: "Ethereum, Polygon, Layer 2 solutions, Web3.js, Ethers.js, and cross-chain interoperability."
+      title: 'Blockchain Development',
+      description:
+        'Ethereum, Sepolia testnet, EVM-based applications, contract interaction, and blockchain transactions.'
     },
     {
       icon: <FaChartLine />,
-      title: "DeFi & Protocols",
-      description: "DEX development, yield farming, liquidity pools, and DeFi protocol integration and optimization."
+      title: 'DeFi & dApps',
+      description:
+        'Decentralized applications, crowdfunding platforms, token vesting, contribution tracking, and refund workflows.'
     },
     {
       icon: <FaReact />,
-      title: "Frontend Development",
-      description: "HTML, CSS, JavaScript, React, Next.js, TypeScript, and modern web development with Web3 wallet integration."
+      title: 'Frontend Development',
+      description:
+        'HTML, CSS, JavaScript, React, Next.js, Vite, responsive interfaces, and interactive web applications.'
     },
     {
       icon: <FaDatabase />,
-      title: "Backend & Infrastructure",
-      description: "Node.js, Express.js, MongoDB, GraphQL, IPFS, and scalable blockchain infrastructure development."
+      title: 'Backend Development',
+      description:
+        'Node.js, Express.js, PostgreSQL, Prisma, REST APIs, and backend integration for decentralized applications.'
     },
     {
       icon: <FaShieldAlt />,
-      title: "Security & Testing",
-      description: "Smart contract auditing, penetration testing, and comprehensive security analysis for Web3 applications."
+      title: 'Testing & Security',
+      description:
+        'Hardhat tests, smart contract verification workflows, OpenZeppelin libraries, and validation of contract behavior.'
     },
     {
       icon: <FaGithub />,
-      title: "Version Control & Collaboration",
-      description: "Git, GitHub, GitLab, collaborative development workflows, code review, and open-source contribution practices."
-      // TODO: Customize this skill description as needed
+      title: 'Tools & Development',
+      description:
+        'Git, GitHub, Hardhat, npm, Vercel, blockchain explorers, and collaborative development workflows.'
     },
     {
       icon: <SiFigma />,
-      title: "UI/UX Design",
-      description: "User interface design, user experience optimization, responsive design, wireframing, prototyping, and modern design systems."
-      // TODO: Customize this skill description as needed
+      title: 'Web3 UI/UX',
+      description:
+        'Clean interfaces, responsive layouts, wallet connection flows, transaction feedback, and user-friendly dApp experiences.'
     }
   ];
 
+  // Real projects replace the previous placeholder cards.
   const projects = [
     {
-      title: "Portfolio Website",
-      description: "A modern, responsive portfolio website built with React featuring a stunning neon blur glass theme and smooth animations.",
-      tech: ["React", "CSS", "JavaScript", "Responsive"],
-      link: "#"
+      title: 'Web3 Crowdfunding dApp',
+      description:
+        'A decentralized crowdfunding platform where users can create campaigns, contribute ETH, track campaign goals and deadlines, and use the contract withdrawal and refund flows.',
+      tech: [
+        'Solidity',
+        'React',
+        'Vite',
+        'ethers.js',
+        'Hardhat',
+        'MetaMask',
+        'Sepolia'
+      ],
+      link: 'https://github.com/Podamekalajagadeesh/crowdfunding-dapp',
+      demo: 'https://crowdfunding-dapp-lilac.vercel.app/'
     },
     {
-      title: "DeFi Project",
-      description: "An innovative DeFi application that will revolutionize yield farming and liquidity provision with advanced smart contract automation.",
-      tech: ["Solidity", "React", "Hardhat", "Web3.js"],
-      link: "https://github.com/Podamekalajagadeesh/Freelance-dapp"
+      title: 'TokenVest — Token Vesting dApp',
+      description:
+        'A token vesting application with cliff and linear vesting schedules, token claims, revocation functionality, and separate administrator and employee workflows.',
+      tech: [
+        'Solidity',
+        'OpenZeppelin',
+        'Hardhat',
+        'React',
+        'Vite',
+        'ethers.js',
+        'MetaMask'
+      ],
+      link: 'https://github.com/Podamekalajagadeesh/token-vesting-dapp',
+      demo: 'https://tokenvest-bice.vercel.app'
     },
     {
-      title: "NFT Collection",
-      description: "A unique NFT collection with generative art and utility features, built on Ethereum with advanced metadata management.",
-      tech: ["ERC-721", "IPFS", "Solidity", "Generative Art"],
-      link: "https://github.com/Podamekalajagadeesh/Nftpass"
+      title: 'FundChain',
+      description:
+        'A crowdfunding application combining a web interface, backend APIs, PostgreSQL data storage, and Ethereum smart contracts for campaign creation, contributions, withdrawals, and refunds.',
+      tech: [
+        'Next.js',
+        'React',
+        'Node.js',
+        'Express.js',
+        'PostgreSQL',
+        'Prisma',
+        'Solidity',
+        'ethers.js'
+      ],
+      link: 'https://github.com/Podamekalajagadeesh/Fundchain',
+      demo: 'https://fundchain-theta-kohl.vercel.app'
     }
   ];
 
   return (
     <div className="App">
-      {/* Animated Circuit Background */}
+      {/* Original animated background */}
       <CircuitBackground />
-      
-      {/* Navigation */}
+
+      {/* Original navigation */}
       <nav className="nav">
         <div className="nav-container">
-          <motion.div 
+          <motion.div
             className="logo"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -157,6 +211,7 @@ function App() {
           >
             Jagadeesh.dev
           </motion.div>
+
           <div className="nav-links">
             {['about', 'skills', 'projects', 'contact'].map((link) => (
               <motion.a
@@ -179,54 +234,101 @@ function App() {
       </nav>
 
       <div className="container">
-        {/* Hero Section */}
+        {/* Original hero layout */}
         <section className="hero" id="about">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <motion.img 
-              src="portfolio.png" 
-              alt="Jagadeesh" 
+            <motion.img
+              src="portfolio.png"
+              alt="Jagadeesh"
               className="profile-img"
               whileHover={{ scale: 1.05, rotate: 2 }}
               whileTap={{ scale: 1.1, rotate: 5 }}
-              transition={{ type: "spring", stiffness: 300 }}
+              transition={{ type: 'spring', stiffness: 300 }}
             />
+
             <h1>Jagadeesh</h1>
             <h2>Web3 Developer & Blockchain Engineer</h2>
+
             <div className="tech-symbols">
-              <motion.div 
+              <motion.div
                 className="symbol-container"
                 whileHover={{ scale: 1.1, rotateX: 10, rotateY: 10 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <svg className="react-symbol" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="50" cy="50" r="8" fill="var(--neon-cyan)"/>
-                  <ellipse cx="50" cy="50" rx="30" ry="8" fill="none" stroke="var(--neon-cyan)" strokeWidth="2" transform="rotate(0 50 50)"/>
-                  <ellipse cx="50" cy="50" rx="30" ry="8" fill="none" stroke="var(--neon-cyan)" strokeWidth="2" transform="rotate(60 50 50)"/>
-                  <ellipse cx="50" cy="50" rx="30" ry="8" fill="none" stroke="var(--neon-cyan)" strokeWidth="2" transform="rotate(120 50 50)"/>
+                <svg
+                  className="react-symbol"
+                  viewBox="0 0 100 100"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="50" cy="50" r="8" fill="var(--neon-cyan)" />
+                  <ellipse
+                    cx="50"
+                    cy="50"
+                    rx="30"
+                    ry="8"
+                    fill="none"
+                    stroke="var(--neon-cyan)"
+                    strokeWidth="2"
+                    transform="rotate(0 50 50)"
+                  />
+                  <ellipse
+                    cx="50"
+                    cy="50"
+                    rx="30"
+                    ry="8"
+                    fill="none"
+                    stroke="var(--neon-cyan)"
+                    strokeWidth="2"
+                    transform="rotate(60 50 50)"
+                  />
+                  <ellipse
+                    cx="50"
+                    cy="50"
+                    rx="30"
+                    ry="8"
+                    fill="none"
+                    stroke="var(--neon-cyan)"
+                    strokeWidth="2"
+                    transform="rotate(120 50 50)"
+                  />
                 </svg>
                 <span>React</span>
               </motion.div>
-              <motion.div 
+
+              <motion.div
                 className="symbol-container"
                 whileHover={{ scale: 1.1, rotateX: 10, rotateY: 10 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <svg className="ethereum-symbol" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                  <polygon points="50,20 30,50 50,45 70,50" fill="var(--neon-cyan)"/>
-                  <polygon points="50,45 30,50 50,80 70,50" fill="var(--neon-blue)"/>
+                <svg
+                  className="ethereum-symbol"
+                  viewBox="0 0 100 100"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <polygon
+                    points="50,20 30,50 50,45 70,50"
+                    fill="var(--neon-cyan)"
+                  />
+                  <polygon
+                    points="50,45 30,50 50,80 70,50"
+                    fill="var(--neon-blue)"
+                  />
                 </svg>
                 <span>Ethereum</span>
               </motion.div>
             </div>
+
             <p>
-              Passionate about building the future of decentralized applications. 
-              Specializing in smart contracts, DeFi protocols, and cutting-edge 
-              blockchain solutions that drive innovation in the Web3 ecosystem.
+              I build blockchain-powered applications and smart contracts
+              focused on practical Web3 use cases. My projects include
+              decentralized crowdfunding, token vesting, and full-stack
+              applications integrated with Ethereum wallets.
             </p>
+
             <div className="cta-buttons">
               <motion.button
                 className="btn btn-primary"
@@ -236,6 +338,7 @@ function App() {
               >
                 Hire Me
               </motion.button>
+
               <motion.button
                 className="btn btn-secondary"
                 onClick={() => scrollToSection('projects')}
@@ -244,6 +347,7 @@ function App() {
               >
                 View Projects
               </motion.button>
+
               <motion.a
                 href="https://github.com/Podamekalajagadeesh"
                 target="_blank"
@@ -258,9 +362,9 @@ function App() {
           </motion.div>
         </section>
 
-        {/* Skills Section */}
+        {/* Original skills section and card classes */}
         <section className="section" id="skills">
-          <motion.h2 
+          <motion.h2
             className="section-title"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -269,6 +373,7 @@ function App() {
           >
             Skills & Technologies
           </motion.h2>
+
           <div className="skills-grid">
             {skills.map((skill, index) => (
               <motion.div
@@ -288,9 +393,9 @@ function App() {
           </div>
         </section>
 
-        {/* Projects Section */}
+        {/* Original projects section and card classes */}
         <section className="section" id="projects">
-          <motion.h2 
+          <motion.h2
             className="section-title"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -299,6 +404,7 @@ function App() {
           >
             Featured Projects
           </motion.h2>
+
           <div className="projects-grid">
             {projects.map((project, index) => (
               <motion.div
@@ -312,22 +418,41 @@ function App() {
               >
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
+
                 <div className="project-tech">
                   {project.tech.map((tech) => (
-                    <span key={tech} className="tech-tag">{tech}</span>
+                    <span key={tech} className="tech-tag">
+                      {tech}
+                    </span>
                   ))}
                 </div>
-                <a href={project.link} className="btn btn-secondary">
-                  {project.title.includes('Coming Soon') ? 'Coming Soon' : 'View Project'}
+
+                <a
+                  href={project.link}
+                  className="btn btn-secondary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Code
+                </a>
+
+                <a
+                  href={project.demo}
+                  className="btn btn-secondary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ marginLeft: '8px' }}
+                >
+                  Live Demo
                 </a>
               </motion.div>
             ))}
           </div>
         </section>
 
-        {/* Contact Section */}
+        {/* Original contact section */}
         <section className="section" id="contact">
-          <motion.h2 
+          <motion.h2
             className="section-title"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -336,7 +461,8 @@ function App() {
           >
             Let's Build The Future Together
           </motion.h2>
-          <motion.div 
+
+          <motion.div
             className="contact-content glass fade-in"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -344,11 +470,13 @@ function App() {
             viewport={{ once: true }}
           >
             <p>
-              Ready to bring your Web3 vision to life? I'm always excited to work 
-              on innovative blockchain projects and collaborate with forward-thinking teams.
+              I’m interested in Web3 development opportunities, blockchain
+              projects, and collaborating with teams building useful
+              decentralized applications.
             </p>
+
             <div className="contact-info">
-              <motion.div 
+              <motion.div
                 className="contact-item"
                 onClick={handleEmailClick}
                 whileHover={{ scale: 1.05 }}
@@ -357,7 +485,8 @@ function App() {
                 <FaEnvelope className="contact-icon" />
                 <p>podamekalajagadeesh@gmail.com</p>
               </motion.div>
-              <motion.div 
+
+              <motion.div
                 className="contact-item"
                 onClick={handleGitHubClick}
                 whileHover={{ scale: 1.05 }}
@@ -366,7 +495,8 @@ function App() {
                 <FaGithub className="contact-icon" />
                 <p>github.com/Podamekalajagadeesh</p>
               </motion.div>
-              <motion.div 
+
+              <motion.div
                 className="contact-item"
                 onClick={handleLinkedInClick}
                 whileHover={{ scale: 1.05 }}
@@ -380,39 +510,34 @@ function App() {
         </section>
       </div>
 
-      {/* Footer */}
+      {/* Original footer styling */}
       <footer>
         <div className="social-links">
-          <motion.a 
-            href="https://github.com/Podamekalajagadeesh" 
-            target="_blank" 
+          <motion.a
+            href="https://github.com/Podamekalajagadeesh"
+            target="_blank"
             rel="noopener noreferrer"
+            aria-label="GitHub"
             whileHover={{ scale: 1.2, y: -3 }}
           >
             <FaGithub />
           </motion.a>
-          <motion.a 
-            href="https://www.linkedin.com/in/podamekalajagadeesh" 
-            target="_blank" 
+
+          <motion.a
+            href="https://www.linkedin.com/in/podamekalajagadeesh/"
+            target="_blank"
             rel="noopener noreferrer"
+            aria-label="LinkedIn"
             whileHover={{ scale: 1.2, y: -3 }}
           >
             <FaLinkedin />
           </motion.a>
-          <motion.a 
-            href="#" 
-            whileHover={{ scale: 1.2, y: -3 }}
-          >
-            <FaTwitter />
-          </motion.a>
-          <motion.a 
-            href="#" 
-            whileHover={{ scale: 1.2, y: -3 }}
-          >
-            <FaDiscord />
-          </motion.a>
         </div>
-        <p>&copy; 2024 Jagadeesh. Building the future of Web3.</p>
+
+        <p>
+          &copy; {new Date().getFullYear()} Jagadeesh. Building the future of
+          Web3.
+        </p>
       </footer>
     </div>
   );
